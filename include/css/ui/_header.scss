@@ -1,0 +1,33 @@
+.header {
+	height:60px;
+	background-color: #fff;
+	position: fixed;
+	width:100%;
+	z-index: 100;
+	box-shadow: 0 1px 3px #e1e1e1;
+	.logo {
+		a {
+			img {
+				width: 85px;
+				margin: 8px 0 0 0;
+			}
+		}
+	}
+	.nav {
+		nav {
+			text-align: right;
+			line-height: 60px;
+			a {
+				padding: 0 0 0 20px;
+				color: #7D7D7D;
+				&:hover {
+					color: #343434;
+				}
+			}
+			.current {
+				font-weight: 600;
+				color: #343434;
+			}
+		}
+	}
+}

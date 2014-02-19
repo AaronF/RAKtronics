@@ -1,3 +1,8 @@
 include/css/.sass-cache
 include/css/.DS_Store
 include/css/fonts/.DS_Store
+include/css/external/.DS_Store
+
+include/images/.DS_Store
+
+include/js/.DS_Store
