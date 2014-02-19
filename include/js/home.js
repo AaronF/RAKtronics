@@ -37,7 +37,7 @@ $(function(){
     var $nav_li = $(".nav nav");
     $(document).scroll( function() {
         var value = $(this).scrollTop();
-        if(value > 80 && navIsBig ){
+        if(value > 60 && navIsBig ){
             $nav.stop().animate({
                 height:50
             },300);

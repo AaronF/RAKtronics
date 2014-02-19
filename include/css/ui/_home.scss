@@ -41,6 +41,23 @@
 		color: #7d7d7d;
 	}
 }
+#design {
+	center {
+		padding: 0px 0 0 0;
+		.cta {
+			margin: 15px 0 0 0;
+			text-align: center;
+			background-color: #FF832F;
+			padding: 7px 15px;
+			@include border-radius(40px);
+			color: #fff;
+			&:hover {
+				background-color:#FF6F0D;
+			}
+		}
+	}
+	
+}
 #overview {
 	background-color:#fff;
 	min-height: 200px;
@@ -67,14 +84,11 @@
 		}
 	}
 }
-#design {
+#electronics {
 	background-color:#fff;
 	.c3 {
 		padding: 0 10px 0 0;
 	}
-}
-#electronics {
-
 }
 #web {
 	background-color:#fff;
