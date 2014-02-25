@@ -40,10 +40,10 @@ if($_POST){
 		$message = mynl2br($message);
 		$message = $message."<br><hr><p>Name: ".$your_name."</p><p>Email: ".$your_email."</p><p>Company: ".$company."</p>";
 		if($_POST["copyself"]==1){
-			mailUser("aaronfisher@me.com", "Richard Fisher", $subject, $message, $your_email, $your_name);
+			mailUser("richard@raktronics.com", "Richard Fisher", $subject, $message, $your_email, $your_name);
 			mailUser($your_email, $your_name, $subject, "<p>Copy of your email: </p><br>".$message, $your_email, $your_name);
 		} else {
-			mailUser("aaronfisher@me.com", "Richard Fisher", $subject, $message, $your_email, $your_name);
+			mailUser("richard@raktronics.com", "Richard Fisher", $subject, $message, $your_email, $your_name);
 		}
 	}
 }
