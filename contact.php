@@ -47,6 +47,12 @@
 		<div class="container contact grid w900">
 			<div class="c8">
 				<h1>Contact Us</h1>
+				<div class="success_callout hide">
+					<p>Success! Your message has been sent.</p>
+				</div>
+				<div class="error_callout hide">
+					<p>Error, try again.</p>
+				</div>
 				<form id="contact_form">
 					<label for="name">Your Name</label>
 					<input type="text" name="name" required placeholder="Your name...">
@@ -58,6 +64,7 @@
 					<input type="text" name="subject" required placeholder="Subject...">
 					<label for="message">Message</label>
 					<textarea required name="message" placeholder="Your message..."></textarea>
+					<lavel for="copyself"><input id="copyself" type="checkbox" checked name="copyself"> Send a Copy to Myself</label>
 					<input type="submit" value="Send" class="float--right">
 				</form>
 				
@@ -85,6 +92,37 @@
 	$(document).ready(function(){
 		$("#contact_form").on("submit", function(){
 			console.log("submitted");
+			var your_name = $("input[name=name]").val();
+			var company = $("input[name=company]").val();
+			var your_email = $("input[name=email]").val();
+			var subject = $("input[name=subject]").val();
+			var message = $("textarea[name=message]").val();
+			var copyself;
+
+			copyself = document.getElementById("copyself");
+			if(copyself.checked){
+				copyself = 1;
+			} else {
+				copyself = 0;
+			}
+
+			$.ajax({
+		        type: "POST",
+		        data: "type=contactform&your_name="+your_name+"&your_email="+your_email+"&company="+company+"&subject="+subject+"&message="+message+"&copyself="+copyself+" ",
+		        url: "include/functions.php",
+		        success: function(msg){
+		        	if(msg == "sentsent"){
+		        		$(".success_callout").removeClass("hide");
+		        		$("input[name=name]").val("");
+						$("input[name=company]").val("");
+						$("input[name=email]").val("");
+						$("input[name=subject]").val("");
+						$("textarea[name=message]").val("");
+		        	} else {
+		        		$(".error_callout").removeClass("hide");
+		        	}
+		        }
+		    });
 			return false;
 		});
 	});

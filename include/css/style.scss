@@ -53,6 +53,36 @@ input[type="text"], input[type="number"], input[type="email"], input[type="url"]
     }
 }
 
+.success_callout {
+	background-color: #DFF0D9;
+	margin: 20px 0;
+	padding: 20px;
+	border-left: 3px solid #3B764A;
+	h4 {
+		color: #2A542E;
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+	p{
+		margin:0;
+	}
+}
+
+.error_callout {
+	background-color: #F3DEDE;
+	margin: 20px 0;
+	padding: 20px;
+	border-left: 3px solid #AB4344;
+	h4 {
+		color: #983435;
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+	p{
+		margin:0;
+	}
+}
+
 
 @import "ui/header";
 @import "ui/footer";

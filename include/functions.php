@@ -19,10 +19,32 @@ function mailUser($to_email, $to_name, $subject, $message, $from_email, $from_na
 		    );
 	    $async = false;
 	    $result = $mandrill->messages->send($message, $async, $ip_pool, $send_at);
-	    print_r($result);
+	    echo "sent";
 	} catch(Mandrill_Error $e) {
 	    echo 'A mandrill error occurred: ' . get_class($e) . ' - ' . $e->getMessage();
 	    throw $e;
+	}
+}
+
+function mynl2br($text) { 
+   return strtr($text, array("\r\n" => '<br />', "\r" => '<br />', "\n" => '<br />')); 
+} 
+
+if($_POST){
+	if($_POST["type"]=="contactform"){
+		$your_name = $_POST["your_name"];
+		$your_email = $_POST["your_email"];
+		$company = $_POST["company"];
+		$subject = $_POST["subject"];
+		$message = $_POST["message"];
+		$message = mynl2br($message);
+		$message = $message."<br><hr><p>Name: ".$your_name."</p><p>Email: ".$your_email."</p><p>Company: ".$company."</p>";
+		if($_POST["copyself"]==1){
+			mailUser("aaronfisher@me.com", "Richard Fisher", $subject, $message, $your_email, $your_name);
+			mailUser($your_email, $your_name, $subject, "<p>Copy of your email: </p><br>".$message, $your_email, $your_name);
+		} else {
+			mailUser("aaronfisher@me.com", "Richard Fisher", $subject, $message, $your_email, $your_name);
+		}
 	}
 }
 ?>
