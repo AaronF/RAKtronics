@@ -2,7 +2,11 @@
 .intro {
 	height:100%;
 	// background-color: #000;
-	padding: 23% 20px 0 20px;
+	padding: 20% 20px 0 20px;
+	@media screen and (max-height: 700px) {
+		padding: 170px 20px 100px 20px;
+		height: auto;
+	}
 	.intro_text {
 		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 		font-weight: 200;
@@ -30,6 +34,9 @@
 .section {
 	width:100%;
 	padding: 60px 0;
+	@include media-query(palm){
+		padding: 40px 0;
+	}
 	.title {
 		color: #333333;
 		border-bottom: 1px solid #E0E0E0;
@@ -48,9 +55,15 @@
 	}
 	.right {
 		padding: 0 0 0 15px;
+		@include media-query(palm){
+			padding: 0;
+		}
 	}
 	.img {
 		padding: 0 10px 5px 0;
+		@include media-query(palm){
+			padding: 0;
+		}
 	}
 }
 #design {

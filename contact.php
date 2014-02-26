@@ -45,7 +45,7 @@
 
 	<div class="main">
 		<div class="container contact grid w900">
-			<div class="c8">
+			<div class="c8 contact_form">
 				<h1>Contact Us</h1>
 				<div class="success_callout hide">
 					<p>Success! Your message has been sent.</p>
@@ -69,8 +69,10 @@
 				</form>
 				
 			</div>
-			<div class="c4 end">
+			<div class="c4 end contact_sidebar">
 				<h1>Other</h1>
+				<p>Insert some fantastic text here...</p>
+				<a href="mailto:richard@raktronics.com">Example mail to link</a>
 			</div>
 			<div class="cf"></div>
 		</div>
