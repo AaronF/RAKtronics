@@ -9,7 +9,7 @@ function isScrolledIntoView(elem){
 }
 
 $(document).ready(function(){
-	$('.overview_box').addClass('hide');
+	// $('.overview_box').addClass('hide');
 	$(".overview_cta").on("click", function(){
 		$('html, body').animate({
             scrollTop: $("#"+$(this).data("value")).offset().top
@@ -18,17 +18,17 @@ $(document).ready(function(){
 	});
 });
 
-$(function () {
-    $(window).scroll(function() {
-	    clearTimeout($.data(this, 'scrollTimer'));
-	    $.data(this, 'scrollTimer', setTimeout(function() {
-	        if(isScrolledIntoView("#overview") == true){
-	        	$('.overview_box').removeClass('hide');
-	        	$('.overview_box').addClass('animated fadeInUp');
-	        }
-	    }, 20));
-	});
-});
+// $(function () {
+//     $(window).scroll(function() {
+// 	    clearTimeout($.data(this, 'scrollTimer'));
+// 	    $.data(this, 'scrollTimer', setTimeout(function() {
+// 	        if(isScrolledIntoView("#overview") == true){
+// 	        	$('.overview_box').removeClass('hide');
+// 	        	$('.overview_box').addClass('animated fadeInUp');
+// 	        }
+// 	    }, 20));
+// 	});
+// });
 
 $(function(){
     var navIsBig = true;

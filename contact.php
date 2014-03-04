@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="include/css/external/animate.css">
 	<link rel="stylesheet" href="include/css/external/font-awesome.css">
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	
+
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -67,12 +67,11 @@
 					<lavel for="copyself"><input id="copyself" type="checkbox" checked name="copyself"> Send a Copy to Myself</label>
 					<input type="submit" value="Send" class="float--right">
 				</form>
-				
+
 			</div>
 			<div class="c4 end contact_sidebar">
 				<h1>Other</h1>
-				<p>Insert some fantastic text here...</p>
-				<a href="mailto:richard@raktronics.com">Example mail to link</a>
+				<a href="mailto:info@raktronics.com">Email me directly</a>
 			</div>
 			<div class="cf"></div>
 		</div>

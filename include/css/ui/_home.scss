@@ -8,7 +8,7 @@
 		height: auto;
 	}
 	.intro_text {
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 		font-weight: 200;
 		color: #7D7D7D;
 		line-height: 1.6em;
@@ -37,6 +37,11 @@
 	@include media-query(palm){
 		padding: 40px 0;
 	}
+	ul {
+		li {
+			color: #7d7d7d;
+		}
+	}
 	.title {
 		color: #333333;
 		border-bottom: 1px solid #E0E0E0;
@@ -49,6 +54,7 @@
 	}
 	p {
 		color: #7d7d7d;
+		margin-bottom: 5px;
 	}
 	.left {
 		// padding: 0 15px 0 0;
@@ -81,7 +87,7 @@
 			}
 		}
 	}
-	
+
 }
 #overview {
 	background-color:#fff;
