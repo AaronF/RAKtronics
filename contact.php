@@ -35,7 +35,7 @@
 					<nav>
 						<a href="index.html">Home</a>
 						<a href="info.html">More Info</a>
-						<a href="#">Blog</a>
+						<a href="blog/index.php">Blog</a>
 						<a href="contact.php" class="current" >Contact</a>
 					</nav>
 				</div>

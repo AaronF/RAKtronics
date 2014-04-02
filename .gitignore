@@ -8,3 +8,5 @@ include/images/.DS_Store
 include/js/.DS_Store
 
 include/.DS_Store
+
+*.espressostorage
